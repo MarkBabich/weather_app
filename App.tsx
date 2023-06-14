@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 export const App: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text>Hii</Text>
+      <Text>REACT NATIVE</Text>
       <Test />
       <StatusBar style="auto" />
     </View>

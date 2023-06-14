@@ -31,6 +31,6 @@
   },
   "private": true,
   "lint-staged": {
-    "*.{tsx,ts}": "eslint --cache --fix"
+    "*.{tsx,ts}": "eslint --fix"
   }
 }
