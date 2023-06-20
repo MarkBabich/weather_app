@@ -1,23 +1,27 @@
 /* eslint-disable react/style-prop-object */
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Test } from './src/Header';
+import { StyleSheet, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { LiveWeatherBlock } from './src/LiveWeatherBlock';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  gradient: {
+    flex: 1,
   },
 });
 
-export const App: React.FC = () => {
+export default function App() {
   return (
     <View style={styles.container}>
-      <Text>REACT NATIVE</Text>
-      <Test />
-      <StatusBar style="auto" />
+      <LinearGradient
+        colors={['#08244F', '#134CB5', '#0B42AB']}
+        locations={[0.05, 0.8]}
+        style={styles.gradient}
+      >
+        <LiveWeatherBlock />
+      </LinearGradient>
     </View>
   );
-};
+}
